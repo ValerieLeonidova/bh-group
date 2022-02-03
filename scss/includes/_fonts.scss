@@ -1,0 +1,26 @@
+
+@font-face {
+  font-family: 'STIXGeneralRegular';
+  src: url('../fonts/STIXGeneral-Regular.eot');
+  src: url('../fonts/STIXGeneral-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/STIXGeneral-Regular.woff2') format('woff2'),
+  url('../fonts/STIXGeneral-Regular.woff') format('woff'),
+  url('../fonts/STIXGeneral-Regular.ttf') format('truetype'),
+  url('../fonts/STIXGeneral-Regular.svg#STIXGeneral-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'STIXGeneralBold';
+  src: url('../fonts/STIXGeneral-Bold.eot');
+  src: url('../fonts/STIXGeneral-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/STIXGeneral-Bold.woff2') format('woff2'),
+  url('../fonts/STIXGeneral-Bold.woff') format('woff'),
+  url('../fonts/STIXGeneral-Bold.ttf') format('truetype'),
+  url('../fonts/STIXGeneral-Bold.svg#STIXGeneral-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

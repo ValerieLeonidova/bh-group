@@ -1,0 +1,26 @@
+/**
+ * Copyright (c) 2016 Connor Atherton
+ *
+ * All animations must live in their own file
+ * in the animations directory and be included
+ * here.
+ *
+ */
+
+/**
+ * Styles shared by multiple animations
+ */
+@import 'variables';
+@import 'mixins';
+
+/**
+ * Dots
+ */
+@import 'animations/ball-spin-fade-loader';
+
+/**
+ * Lines
+ */
+@import 'animations/line-spin-fade-loader';
+
+

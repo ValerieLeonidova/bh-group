@@ -1,0 +1,52 @@
+.btn {
+  @extend .inline-b;
+  @extend .ttu;
+  background: cl(primary);
+  color:cl(white);
+  font-size: rem(16px);
+  line-height: rem(48px);
+  font-family: $fontSTIXGeneralR;
+  font-weight: 700;
+  border: rem(1px solid cl(primary));
+  cursor: pointer;
+  border-radius: rem(25px);
+  letter-spacing: rem(2px);
+  padding: rem(0 30px);
+  outline: 0;
+  white-space: nowrap;
+  &:hover {
+    border-color:cl(primary);
+    background: cl(primary, 0.9);
+    color:cl(white);
+    text-decoration: none;
+  }
+  &:focus {
+    box-shadow:none;
+    color:cl(white);
+  }
+  &--primary-outline {
+    background: none;
+    color:cl(primary);
+    border-color:cl(primary);
+    &:hover {
+      background: cl(primary, 0.1);
+    }
+  }
+  &--white {
+    background: white;
+    border-color:white;
+    color:black;
+    text-transform: uppercase;
+    &:hover {
+      color:black;
+      background: cl(white, .8);
+    }
+  }
+  &--black {
+    background: cl(black);
+    border-color:cl(black);
+    &:hover {
+      background: cl(black, .8);
+    }
+  }
+}

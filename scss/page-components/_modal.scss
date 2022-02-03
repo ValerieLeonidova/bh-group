@@ -1,0 +1,26 @@
+.modal-example {
+  .modal-dialog {
+    max-width: rem(600px);
+  }
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+  }
+  .close {
+    margin: 0;
+    position: absolute;
+    top: rem(20px);
+    right: rem(20px);
+    width: rem(18px);
+    height: rem(18px);
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../img/close.png) no-repeat 50% 50%;
+    background-size: contain;
+    padding: 0;
+    opacity: 1;
+    z-index: 10;
+  }
+}

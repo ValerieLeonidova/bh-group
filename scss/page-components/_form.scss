@@ -1,0 +1,204 @@
+.form {
+  &-group {
+    margin:rem(0 0 40px);
+    position: relative;
+    .view-pass {
+      position: absolute;
+      bottom:rem(14px);
+      right:rem(12px);
+      color: cl(primary);
+      line-height: rem(16px);
+      background: none;
+      border:0;
+      cursor: pointer;
+      &:hover{
+        color: cl(primary);
+      }
+      &:focus {
+        outline: none;
+        color: cl(primary);
+      }
+      i{
+        font-size: 1rem;
+      }
+      .fa-eye-slash{
+        display: block;
+      }
+      .fa-eye{
+        display: none;
+      }
+      &.active{
+        .fa-eye-slash{
+          display: none;
+        }
+        .fa-eye{
+          display: block;
+        }
+      }
+    }
+  }
+  &-label {
+    @extend .ttu;
+    display: block;
+    color:cl(text);
+    font-size: rem(12px);
+    margin:rem(0 0 5px);
+    font-family: $font;
+  }
+  &-control,
+  .custom-select {
+    display: block;
+    width:100%;
+    font-family: $fontSTIXGeneralR;
+    height: rem(38px);
+    border-radius: 0;
+    background: none;
+    border:0;
+    border-bottom:1px solid #777776;
+    padding:0;
+    font-size:rem(18px);
+    color:white;
+    @include placeholder(#777776);
+    &:focus {
+      outline: none;
+      color:white;
+      box-shadow:none;
+      background: none;
+      border-color:white;
+    }
+  }
+  .custom-select {
+    background-image: url(../img/select-arrow.png);
+    background-repeat: no-repeat;
+    background-position: right .5rem center;
+    background-size: rem(16px auto);
+    padding-right: rem(25px);
+  }
+  textarea.form-control {
+    border:1px solid #777776;
+    resize: none;
+    padding: 1rem;
+    height:rem(200px);
+  }
+  &-btn {
+    background: none;
+    border:0;
+    padding: rem(5px);
+    text-transform: uppercase;
+    color:white;
+    font-size: rem(16px);
+    line-height: rem(18px);
+    letter-spacing: rem(2px);
+  }
+  &-check {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    &-input-checkbox {
+      width: rem(22px);
+      height: rem(22px);
+      position: absolute;
+      z-index: 3;
+      opacity: 0;
+      left:0;
+      top:0;
+      @extend .inline-b;
+      & + .form-check-label {
+        font-weight: normal;
+        @extend .inline-b;
+        padding: rem(0 0 0 34px);
+        margin: 0;
+        position: relative;
+        font-size: rem(15px);
+        line-height: rem(22px);
+        color:cl(text);
+        &:before {
+          content: '';
+          position: absolute;
+          left:0;
+          top:0;
+          width: rem(22px);
+          height: rem(22px);
+          border-radius: rem(3px);
+          background: cl(white);
+          border:rem(1px solid cl(gray));
+        }
+        &:after {
+          content: '\f00c';
+          position: absolute;
+          top:0;
+          left: 0;
+          width: rem(22px);
+          height: rem(22px);
+          line-height: rem(22px);
+          text-align: center;
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          opacity: 0;
+          font-size: rem(10px);
+          color: cl(primary);
+        }
+      }
+      &:checked {
+        & + .form-check-label {
+          &:before {
+            //background: cl(primary);
+            //border-color: cl(primary);
+          }
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    &-input-radio {
+      width: rem(22px);
+      height: rem(22px);
+      position: absolute;
+      z-index: 3;
+      opacity: 0;
+      left:0;
+      top:0;
+      @extend .inline-b;
+      & + .form-check-label {
+        font-weight: normal;
+        @extend .inline-b;
+        padding: rem(0 0 0 34px);
+        margin: 0;
+        position: relative;
+        font-size: rem(15px);
+        line-height: rem(22px);
+        color:cl(text);
+        &:before {
+          content: '';
+          position: absolute;
+          left:0;
+          top:0;
+          width: rem(22px);
+          height: rem(22px);
+          border:rem(1px solid cl(gray));
+          border-radius: 50%;
+          background: cl(white);
+        }
+      }
+      &:checked {
+        & + .form-check-label {
+          &:before {
+            border-color: cl(primary);
+            border-width:rem(7px);
+          }
+        }
+      }
+    }
+  }
+  .cards-list {
+    display: flex;
+    align-items: center;
+    min-height: rem(44px);
+    img {
+      margin: rem(0 3px 0 0);
+      width:rem(30px);
+      height: auto;
+    }
+  }
+}

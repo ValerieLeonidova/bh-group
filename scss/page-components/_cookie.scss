@@ -1,0 +1,50 @@
+.cookie-block {
+  position: fixed;
+  left:0;
+  bottom: 0;
+  width:100%;
+  background: rgba(0,0,0,0.9);
+  padding: rem(16px 0);
+  z-index: 999;
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-down(xs){
+      flex-direction: column;
+    }
+    .text {
+      text-align: center;
+      color:#fff;
+      font-size: rem(16px);
+      line-height: rem(32px);
+      padding: rem(0 40px 0 0);
+      @include media-breakpoint-down(xs) {
+        font-size: rem(15px);
+        line-height: rem(20px);
+        padding: rem(0 0 16px);
+      }
+      h6 {
+        font-size: rem(18px);
+        margin: rem(0 0 5px);
+        font-weight: 700;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .button {
+      background: #fff;
+      color:#000;
+      font-size: rem(16px);
+      line-height: rem(42px);
+      padding: rem(0 18px);
+      border:rem(1px solid #fff);
+      @extend .ttu;
+      font-weight: 700;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

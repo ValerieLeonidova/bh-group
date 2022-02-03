@@ -1,0 +1,62 @@
+$font: 'Montserrat', sans-serif;
+$fontSTIXGeneralR: 'STIXGeneralRegular', sans-serif;
+$fontSTIXGeneralB: 'STIXGeneralBold', sans-serif;
+
+$min-aspect169 : "(min-aspect-ratio: 16/9)";
+$max-aspect169 : "(max-aspect-ratio: 16/9)";
+
+$colors_theme : (
+        "primary"   : "primary",
+        "secondary" : "secondary",
+        "text" : "text",
+        "background" : "background",
+        "gray" : "gray",
+        "black" : "black",
+        "white" : "white"
+);
+
+$colors : (
+        'primary'  : #ffffff,
+        'secondary'  : #000000,
+        'text'  : #333333,
+        'background'  : #1d1d1b,
+        'gray'  : #b6b6b6,
+        'white' : #FFFFFF,
+        'black' : #000000,
+);
+
+.color {
+  @each $status, $color in $colors {
+    &--#{$status} {
+      color: $color;
+    }
+  }
+}
+
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@function cl($name, $opacity: false) {
+  @if $opacity {
+    @return rgba(var(--color-#{unquote($name)}--rgb), $opacity);
+  } @else {
+    @return var(--color-#{unquote($name)});
+  }
+}
+
+:root{
+  @if $colors {
+    @if $colors_theme {
+      @each $key, $value in $colors_theme {
+        --color-#{$key} : var(--color-#{$value});
+        --color-#{$key}--rgb : var(--color-#{$value}--rgb);
+      }
+    }
+
+    @each $key, $value in $colors {
+      --color-#{$key} : #{$value};
+      --color-#{$key}--rgb : #{HexToRGB($value)};
+    }
+  }
+}

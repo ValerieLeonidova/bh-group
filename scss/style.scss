@@ -1,0 +1,30 @@
+
+/* **************** bootstrap ****************** */
+@import "bootstrap/bootstrap";
+
+/* **************** fontawesome ****************** */
+@import "fontawesome/fontawesome";
+@import "fontawesome/brands";
+@import "fontawesome/regular";
+@import "fontawesome/solid";
+
+/* **************** INCLUDES ****************** */
+@import "includes/rem";
+@import "includes/base";
+@import "includes/fonts";
+@import "includes/variables";
+@import "includes/common";
+
+/* **************** loader ****************** */
+@import "loader/loaders";
+
+/* **************** plugins ****************** */
+@import "plugins/slick";
+
+/* **************** PAGE COMPONENTS ****************** */
+@import "page-components/buttons";
+@import "page-components/header";
+@import "page-components/footer";
+@import "page-components/banner";
+@import "page-components/portfolio";
+
